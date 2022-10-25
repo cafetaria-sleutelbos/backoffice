@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Item;
+use App\Models\Media;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(FrietSeeder::class);
+        $this->call(SnacksSeeder::class);
+
+        if((env('APP_ENV') ?? 'local') == 'local'){
+            $this->call(MockOrderSeeder::class);
+        }
     }
 }
