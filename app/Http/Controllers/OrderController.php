@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return 'index';
+        $orders = Order::all();
+        return view('orders.index')->with(['orders' => $orders]);
     }
-    public function show()
+
+    public function show(Request $request, Order $order)
     {
-        return 'show';
+        return view('orders.show')->with(['order' => $order]);
     }
+
     public function create()
     {
         return 'create';
