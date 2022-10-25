@@ -1,4 +1,5 @@
 ## To start:
+- PHP version ^8
 - Composer install
 - Npm install
 - Migrate stuff
