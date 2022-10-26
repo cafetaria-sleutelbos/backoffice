@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +18,10 @@ class DatabaseSeeder extends Seeder
         $this->call(SnacksSeeder::class);
 
         if((env('APP_ENV') ?? 'local') == 'local'){
+            User::factory()->create([
+                'name' => 'admin',
+                'email' => 'admin@admin.admin'
+            ]);
             $this->call(MockOrderSeeder::class);
         }
     }

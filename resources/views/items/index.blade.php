@@ -7,4 +7,6 @@
             </a>
         @endforeach
     </div>
+
+    @include('items.form')
 </x-app-layout>

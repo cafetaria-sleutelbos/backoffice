@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DeleteItemRequest;
+use App\Http\Requests\StoreItemRequest;
+use App\Http\Requests\UpdateItemRequest;
 use App\Models\Item;
 use Illuminate\Http\Request;
 
@@ -22,20 +25,31 @@ class ItemController extends Controller
     {
         return 'create';
     }
-    public function store()
+
+    public function store(StoreItemRequest $request)
     {
-        return 'store';
+        $validated = $request->validated();
+        $item = Item::create($validated);
+        return redirect('/items/' . $item->id);
     }
+
     public function edit()
     {
         return 'edit';
     }
-    public function update()
+
+    public function update(UpdateItemRequest $request, Item $item)
     {
-        return 'update';
+        $validated = $request->validated();
+        $item->update($validated);
+        return redirect('/items/' . $item->id);
     }
-    public function destroy()
+
+    public function destroy(DeleteItemRequest $request, Item $item)
     {
-        return 'destroy';
+        $item->orders()->detach();
+        $item->delete();
+
+        return redirect('/items');
     }
 }

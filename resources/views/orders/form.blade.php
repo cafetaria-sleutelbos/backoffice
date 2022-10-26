@@ -1,9 +1,25 @@
-<x-app-layout>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
+<form method="POST" action="/orders{{isset($resource) ? '/' . $resource->id : ''}}">
+    @csrf
+    @method(isset($resource) ? 'PUT' : 'POST')
+
+    <div>
+        @error('status')
+        <div>
+            <span class="text-red-600">
+                {{$message}}
+            </span>
         </div>
+        @enderror
+        <label for="status">status</label>
+        <select id="status" name="status">
+            @foreach(config('enums.order_statuses') as $key => $status)
+                <option value="{{$key}}"
+                        @if((isset($resource) && $resource->status == $key) || old('status') == $key) selected="selected" @endif>
+                    {{$status}}
+                </option>
+            @endforeach
+        </select>
     </div>
-</x-app-layout>
+
+    <button type="submit">{{isset($resource) ? 'update' : 'create'}}</button>
+</form>
