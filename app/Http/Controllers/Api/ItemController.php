@@ -10,11 +10,11 @@ class ItemController extends Controller
 {
     public function index(Request $request)
     {
-        return 'api.items.index';
+        return Item::all();
     }
 
-    public function show(Item $order)
+    public function show(Item $item)
     {
-        return 'api.items.show';
+        return $item;
     }
 }

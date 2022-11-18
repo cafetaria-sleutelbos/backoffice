@@ -10,11 +10,11 @@ class OrderController extends Controller
 {
     public function index(Request $request)
     {
-        return 'api.orders.index';
+        return Order::all();
     }
 
     public function show(Order $order)
     {
-        return 'api.orders.show';
+        return $order;
     }
 }
