@@ -27,6 +27,9 @@
                 <a href="/items" class="mx-6 font-semibold text-xl text-gray-800 leading-tight hover:text-blue-400">
                     {{ __('Items') }}
                 </a>
+                <a href="/api-keys" class="mx-6 font-semibold text-xl text-gray-800 leading-tight hover:text-blue-400">
+                    {{ __('Api Keys') }}
+                </a>
                 <form method="POST" action="{{ route('logout') }}" class="ml-auto">
                     @csrf
                     <a class="mx-6 font-semibold text-xl text-gray-800 leading-tight hover:text-blue-400"

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiKeysController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
 use App\Models\Order;
@@ -24,4 +25,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::resource('/orders', OrderController::class);
     Route::resource('/items', ItemController::class);
+    Route::resource('/api-keys', ApiKeysController::class);
 });

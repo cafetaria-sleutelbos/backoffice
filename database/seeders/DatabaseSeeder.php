@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
                 'email' => 'admin@admin.admin'
             ]);
             $this->call(MockOrderSeeder::class);
+            $this->call(ApiKeysSeeder::class);
         }
     }
 }
