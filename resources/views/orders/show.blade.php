@@ -5,9 +5,9 @@
 
     <div class="flex flex-col">
         ORDER NR {{$order->id}}:
-        @foreach($order->items as $item)
+        @foreach($order->items()->distinct()->get() as $item)
             <a href="/items/{{$item->id}}" class="hover:bg-blue-400">
-                {{$item->name}}
+                {{$item->orders->where('id', $order->id)->count() }}x {{$item->name}}
             </a>
         @endforeach
     </div>
