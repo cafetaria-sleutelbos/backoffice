@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ItemController;
-use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\ScanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login', [AuthController::class, 'login']);
-Route::apiResource('orders', OrderController::class);
+Route::apiResource('orders', ScanController::class);
 Route::apiResource('items', ItemController::class);
