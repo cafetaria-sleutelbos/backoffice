@@ -25,8 +25,6 @@ class StoreOrderRequest extends FormRequest
     {
         return [
             'items' => ['required', 'array'],
-            'items.*.id' => ['required'],
-            'items.*.amount' => ['required'],
         ];
     }
 }
