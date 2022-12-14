@@ -13,7 +13,7 @@ class ScanController extends Controller
         $validated = $request->validated();
 
         Scan::create([
-            'data' => $validated['data']
+            'data' => $validated['scan']
         ]);
 
         return response('scan received', 200);
