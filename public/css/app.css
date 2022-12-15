@@ -32398,6 +32398,13 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn{
+  background: dimgrey;
+  color: white;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

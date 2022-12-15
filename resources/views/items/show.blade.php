@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('content')
     <a href="/items" class="hover:bg-blue-400">
         back
     </a>
@@ -17,4 +19,8 @@
     </div>
 
     @include('items.form', ['resource' => $item])
-</x-app-layout>
+@endsection
+
+@section('scripts')
+{{--    <script src="{{ asset('js/scans.js') }}"></script>--}}
+@endsection
