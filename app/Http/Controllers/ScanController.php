@@ -18,6 +18,10 @@ class ScanController extends Controller
         return view('scans.index', ['scans' => $scans]);
     }
 
+    public function show(Scan $scan){
+        return view('scans.show', ['scan' => $scan]);
+    }
+
     public function export()
     {
         return Excel::download(new ScansExport, 'scans-' . time(). '.csv');
