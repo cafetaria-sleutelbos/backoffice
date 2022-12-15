@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('content')
     <a href="/api-keys" class="hover:bg-blue-400">
         back
     </a>
@@ -8,4 +10,8 @@
     </div>
 
     @include('api.form', ['resource' => $apiKey])
-</x-app-layout>
+@endsection
+
+@section('scripts')
+{{--    <script src="{{ asset('js/scans.js') }}"></script>--}}
+@endsection

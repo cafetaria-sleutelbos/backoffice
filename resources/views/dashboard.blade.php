@@ -1,3 +1,5 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('content')
     <x-jet-welcome/>
-</x-app-layout>
+@endsection

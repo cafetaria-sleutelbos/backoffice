@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/datatables.css') }}">
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
@@ -20,6 +21,9 @@
             <div class="flex">
                 <a href="/" class="mx-6 font-semibold text-xl text-gray-800 leading-tight hover:text-blue-400">
                     {{ __('Dashboard') }}
+                </a>
+                <a href="/scans" class="mx-6 font-semibold text-xl text-gray-800 leading-tight hover:text-blue-400">
+                    {{ __('Scans') }}
                 </a>
                 <a href="/orders" class="mx-6 font-semibold text-xl text-gray-800 leading-tight hover:text-blue-400">
                     {{ __('Orders') }}
@@ -49,13 +53,17 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    {{ $slot }}
+                    @yield('content')
                 </div>
             </div>
         </div>
     </main>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+@yield('scripts')
 @stack('modals')
 </body>
 </html>

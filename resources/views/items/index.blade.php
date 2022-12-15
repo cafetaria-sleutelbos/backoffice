@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('content')
     <div class="flex flex-col">
         ITEMS:
         @foreach($items as $item)
@@ -9,4 +11,8 @@
     </div>
 
     @include('items.form')
-</x-app-layout>
+@endsection
+
+@section('scripts')
+{{--    <script src="{{ asset('js/scans.js') }}"></script>--}}
+@endsection
