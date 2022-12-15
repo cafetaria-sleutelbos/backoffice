@@ -9,8 +9,10 @@
         <h2 class="font-bold text-2xl">
             SCAN ID {{$scan->id}}:
         </h2>
-        <div>
+        <div style="overflow: scroll">
+            <span>
             DATA: {{$scan->data}}
+            </span>
         </div>
         <div>
             CREATED AT: {{$scan->created_at->format('d-m-Y H:i')}}

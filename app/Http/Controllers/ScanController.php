@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Exports\ScansExport;
 use App\Models\Scan;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use League\Csv\Writer;
 
