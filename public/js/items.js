@@ -2054,23 +2054,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/modal.js":
-/*!*******************************!*\
-  !*** ./resources/js/modal.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ modal)
-/* harmony export */ });
-function modal(modal) {
-  console.log('ok modal');
-}
-
-/***/ }),
-
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -2349,27 +2332,22 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 /*!*******************************!*\
-  !*** ./resources/js/scans.js ***!
+  !*** ./resources/js/items.js ***!
   \*******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ "./resources/js/modal.js");
-
 
 function initTable() {
-  return $('#scans_table').DataTable({
+  return $('#items_table').DataTable({
     'lengthChange': false,
     "stripeClasses": ['dt_even', 'dt_odd'],
     "columnDefs": [{
-      orderData: [3],
-      targets: 2
+      orderData: [4],
+      targets: 3
     }, {
-      targets: 3,
+      targets: 4,
       visible: false
-    }, {
-      "width": "20%",
-      "targets": [0, 2]
     }],
     createdRow: function createdRow(row, data, index) {
       //
@@ -2382,32 +2360,13 @@ function initTable() {
     }
   });
 }
-function updateRealTime() {
-  // axios({
-  //     method: 'post',
-  //     url: '/scans/12345',
-  //     data: {
-  //         firstName: 'Fred',
-  //         lastName: 'Flintstone'
-  //     }
-  // });
-}
 $(document).ready(function () {
   var table = initTable();
-
-  // if (table.context) {
-  //     setInterval(updateRealTime, 2000);
-  // }
-
   if (table) {
-    $('#scans_table_wrapper').on('click', '.table_row', function () {
-      window.location.href = '/scans/' + $(this).attr('data-item-id');
-    });
-    $('#scans_export_csv').on('click', function () {
-      window.location.href = '/scans-export';
+    table.on('click', '.table_row', function () {
+      window.location.href = '/items/' + $(this).attr('data-item-id');
     });
   }
-  (0,_modal__WEBPACK_IMPORTED_MODULE_1__["default"])($('#exampleModal'));
 });
 })();
 

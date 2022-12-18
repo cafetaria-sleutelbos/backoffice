@@ -1,18 +1,66 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex flex-col">
-        ORDERS:
-        @foreach($orders as $order)
-            <a href="/orders/{{$order->id}}" class="hover:bg-blue-400">
-                {{$order->id}} - {{$order->status}} - {{$order->items->count()}} - {{$order->created_at}}
-            </a>
-        @endforeach
+    <div class="flex flex-col m-4">
+        <div class="show_header">
+            <div>
+                <h2 class="font-bold text-2xl">
+                    ORDERS
+                </h2>
+            </div>
+            <div class="actions">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#orderModal" class="action_btn">Create</a>
+            </div>
+        </div>
+        <div>
+            <table id="orders_table" class="hover">
+                <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Items count
+                    </th>
+                    <th>
+                        Created
+                    </th>
+                    <th>
+                        Unix
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($orders as $order)
+                    <tr>
+                        <td>
+                            {{$order->id}}
+                        </td>
+                        <td>
+                            {{$order->status}}
+                        </td>
+                        <td>
+                            {{$order->items->count()}}
+                        </td>
+                        <td>
+                            {{$order->created_at->format('d-m-Y H:i')}}
+                        </td>
+                        <td>
+                            {{strtotime($order->created_at)}}
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 
     @include('orders.form')
 @endsection
 
 @section('scripts')
-{{--    <script src="{{ asset('js/scans.js') }}"></script>--}}
+    <script src="{{ asset('js/orders.js') }}"></script>
 @endsection

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Exports\ScansExport;
+use App\Http\Requests\UpdateScanRequest;
 use App\Models\Scan;
 use Maatwebsite\Excel\Facades\Excel;
-use League\Csv\Writer;
 
 
 class ScanController extends Controller
@@ -20,6 +20,13 @@ class ScanController extends Controller
         return view('scans.show', ['scan' => $scan]);
     }
 
+    public function update(UpdateScanRequest $request, Scan $scan){
+        $validated = $request->validated();
+        $scan->update([
+            'data' => $validated['data']
+        ]);
+        return redirect('/scans/' . $scan->id);
+    }
     public function export()
     {
         return Excel::download(new ScansExport, 'scans-' . time(). '.csv');

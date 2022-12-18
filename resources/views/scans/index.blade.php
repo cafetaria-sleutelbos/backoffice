@@ -2,12 +2,19 @@
 
 @section('content')
     <div class="flex flex-col m-4">
-        <div class="flex justify-between">
-            <h2 class="font-bold text-2xl">Scans</h2>
-            <span id="scans_export_csv">Export</span>
+        <div class="show_header">
+            <div>
+                <h2 class="font-bold text-2xl">
+                    Scans
+                </h2>
+            </div>
+            <div class="actions">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal" class="action_btn">Create</a>
+                <span id="scans_export_csv" class="action_btn">Export</span>
+            </div>
         </div>
         <div>
-            <table id="scans_table">
+            <table id="scans_table" class="hover">
                 <thead>
                 <tr>
                     <th>
@@ -17,7 +24,7 @@
                         Received Data
                     </th>
                     <th>
-                        Date
+                        Created
                     </th>
                     <th>
                         Unix

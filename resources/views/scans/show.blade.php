@@ -1,36 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="/scans" class="hover:bg-blue-400">
-        back
-    </a>
-
-    <div class="flex flex-col">
-        <h2 class="font-bold text-2xl">
-            SCAN ID {{$scan->id}}:
-        </h2>
-        <div style="overflow: scroll">
-            <span>
+    <div class="flex flex-col m-4">
+        <div class="show_header">
+            <div>
+                <a href="/scans" class="crumb">
+                    back
+                </a>
+                <h2 class="font-bold text-2xl">
+                    SCAN ID {{$scan->id}}:
+                </h2>
+            </div>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal">Edit</a>
+        </div>
+        <div class="scanned_data">
             DATA: {{$scan->data}}
-            </span>
         </div>
         <div>
             CREATED AT: {{$scan->created_at->format('d-m-Y H:i')}}
         </div>
     </div>
 
-{{--    <div class="bg-red-600 text-white">--}}
-{{--        <form method="POST" action="/orders/{{$order->id}}">--}}
-{{--            @csrf--}}
-{{--            @method('DELETE')--}}
-{{--            <button type="submit">delete</button>--}}
-{{--        </form>--}}
-{{--    </div>--}}
-
-{{--    @include('orders.form', ['resource' => $order])--}}
+    @include('scans.form', ['resource' => $scan])
 @endsection
 
 @section('scripts')
-    {{--    <script src="{{ asset('js/scans.js') }}"></script>--}}
+    <script src="{{ asset('js/scans.js') }}"></script>
 @endsection
 
