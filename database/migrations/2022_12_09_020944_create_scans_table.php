@@ -15,7 +15,8 @@ class CreateScansTable extends Migration
     {
         Schema::create('scans', function (Blueprint $table) {
             $table->id();
-            $table->longText('data');
+            $table->longText('data')->nullable();
+            $table->text('receipt_path')->nullable();
             $table->timestamps();
         });
     }

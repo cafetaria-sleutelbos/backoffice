@@ -11,5 +11,6 @@ class Scan extends Model
 
     protected $fillable = [
         'data',
+        'receipt_path'
     ];
 }
