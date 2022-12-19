@@ -10,6 +10,7 @@
             </div>
             <div class="actions">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal" class="action_btn">Create</a>
+                <span id="scans_download_img" class="action_btn">Download Imgs</span>
                 <span id="scans_export_csv" class="action_btn">Export</span>
             </div>
         </div>

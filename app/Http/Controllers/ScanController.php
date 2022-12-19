@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateScanRequest;
 use App\Models\Scan;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use ZipArchive;
 
 
 class ScanController extends Controller
@@ -34,6 +35,28 @@ class ScanController extends Controller
         $scan->delete();
 
         return redirect('/scans');
+    }
+    public function downloadImages()
+    {
+        $zip_file = 'receipt_images_'.time().'.zip';
+        $zip = new \ZipArchive();
+        $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
+
+        $path = storage_path('app\public\receipts');
+        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
+        foreach ($files as $name => $file)
+        {
+            // We're skipping all subfolders
+            if (!$file->isDir()) {
+                $filePath = $file->getRealPath();
+
+                // extracting filename with substr/strlen
+                $relativePath = 'receipts/' . substr($filePath, strlen($path) + 1);
+                $zip->addFile($filePath, $relativePath);
+            }
+        }
+        $zip->close();
+        return response()->download($zip_file);
     }
     public function export()
     {

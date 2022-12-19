@@ -2406,6 +2406,9 @@ $(document).ready(function () {
     $('#scans_export_csv').on('click', function () {
       window.location.href = '/scans-export';
     });
+    $('#scans_download_img').on('click', function () {
+      window.location.href = '/scans-download-images';
+    });
   }
   (0,_modal__WEBPACK_IMPORTED_MODULE_1__["default"])($('#exampleModal'));
 });
