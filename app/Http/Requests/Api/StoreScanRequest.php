@@ -24,7 +24,8 @@ class StoreScanRequest extends FormRequest
     public function rules()
     {
         return [
-            'scan' => ['nullable'],
+            'data' => ['nullable'],
+            'receipt_image' => ['nullable'],
         ];
     }
 }
