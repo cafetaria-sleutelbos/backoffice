@@ -14,10 +14,10 @@
             <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal">Edit</a>
         </div>
         <div class="scanned_data">
-{{--            DATA: {{$scan->data}}--}}
+            {{--            DATA: {{$scan->data}}--}}
         </div>
         <div class="scanned_data">
-            IMAGE: {{$scan->receipt_path}}
+            IMAGE: <img src="{{asset($scan->receipt_path)}}" alt="profile Pic" height="200" width="200">
         </div>
         <div>
             CREATED AT: {{$scan->created_at->format('d-m-Y H:i')}}

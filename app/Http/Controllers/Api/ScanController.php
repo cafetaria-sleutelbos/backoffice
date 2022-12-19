@@ -17,12 +17,12 @@ class ScanController extends Controller
         if ($image_base64){
             $image_base64 = str_replace('data:image/png;base64,', '', $image_base64);
             $image_base64 = str_replace(' ', '+', $image_base64);
-            $imageName = 'receipt_'.time().'.'.'png';
+            $imagePath = 'receipts/receipt_'.time().'.'.'png';
             $decoded = base64_decode($image_base64);
-            Storage::disk('public')->put('receipts/'.$imageName, $decoded);
+            Storage::disk('public')->put($imagePath, $decoded);
             Scan::create([
                 'data' => $image_base64,
-                'receipt_path' => 'receipts/'.$imageName
+                'receipt_path' => 'storage/'.$imagePath
             ]);
             return response('Scan received WITH image', 200);
         }else{
