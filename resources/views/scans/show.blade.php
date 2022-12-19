@@ -11,7 +11,16 @@
                     SCAN ID {{$scan->id}}:
                 </h2>
             </div>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal">Edit</a>
+            <div class="actions">
+                <div class="action_btn delete">
+                    <form method="POST" action="/scans/{{$scan->id}}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">delete</button>
+                    </form>
+                </div>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal" class="action_btn">Edit</a>
+            </div>
         </div>
         <div class="scanned_data">
             {{--            DATA: {{$scan->data}}--}}

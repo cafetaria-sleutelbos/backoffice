@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\ScansExport;
 use App\Http\Requests\UpdateScanRequest;
 use App\Models\Scan;
+use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -26,6 +27,13 @@ class ScanController extends Controller
             'data' => $validated['data']
         ]);
         return redirect('/scans/' . $scan->id);
+    }
+    public function destroy(Scan $scan)
+    {
+        Storage::disk('public')->delete(str_replace('storage/', '', $scan->receipt_path ));
+        $scan->delete();
+
+        return redirect('/scans');
     }
     public function export()
     {
