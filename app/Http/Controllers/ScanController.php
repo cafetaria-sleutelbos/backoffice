@@ -42,7 +42,7 @@ class ScanController extends Controller
         $zip = new \ZipArchive();
         $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
 
-        $path = storage_path('app\public\receipts');
+        $path = storage_path('app/public/receipts');
         $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
         foreach ($files as $name => $file)
         {
