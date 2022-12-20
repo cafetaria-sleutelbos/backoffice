@@ -22,14 +22,14 @@
                 <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal" class="action_btn">Edit</a>
             </div>
         </div>
-        <div class="scanned_data">
-            DATA: {{$scan->data}}
+        <div>
+            CREATED AT: {{$scan->created_at->format('d-m-Y H:i')}}
         </div>
         <div class="scanned_data">
             IMAGE: <img src="{{asset($scan->receipt_path)}}" alt="profile Pic" height="200" width="200">
         </div>
-        <div>
-            CREATED AT: {{$scan->created_at->format('d-m-Y H:i')}}
+        <div class="scanned_data">
+            DATA: {{$scan->data}}
         </div>
     </div>
 
