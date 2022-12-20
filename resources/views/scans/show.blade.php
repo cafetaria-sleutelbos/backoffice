@@ -26,7 +26,7 @@
             CREATED AT: {{$scan->created_at->format('d-m-Y H:i')}}
         </div>
         <div class="scanned_data">
-            IMAGE: <img src="{{asset($scan->receipt_path)}}" alt="profile Pic" height="200" width="200">
+            IMAGE: <img src="{{asset('storage/'.$scan->receipt_path)}}" alt="profile Pic" height="200" width="200">
         </div>
         <div class="scanned_data">
             DATA: {{$scan->data}}
