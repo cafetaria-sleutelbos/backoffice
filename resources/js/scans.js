@@ -3,6 +3,7 @@ import modal from './modal'
 
 function initTable() {
     return $('#scans_table').DataTable({
+        pageLength: 25,
         'lengthChange': false, "stripeClasses": ['dt_even', 'dt_odd'], "columnDefs": [{
             orderData: [3], targets: 2
         }, {

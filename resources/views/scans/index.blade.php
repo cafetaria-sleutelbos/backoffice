@@ -5,7 +5,7 @@
         <div class="show_header">
             <div>
                 <h2 class="font-bold text-2xl">
-                    Scans
+                    Scans ({{$scans->count()}}
                 </h2>
             </div>
             <div class="actions">

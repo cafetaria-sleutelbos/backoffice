@@ -2359,6 +2359,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function initTable() {
   return $('#scans_table').DataTable({
+    pageLength: 25,
     'lengthChange': false,
     "stripeClasses": ['dt_even', 'dt_odd'],
     "columnDefs": [{

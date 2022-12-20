@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="scanned_data">
-            {{--            DATA: {{$scan->data}}--}}
+            DATA: {{$scan->data}}
         </div>
         <div class="scanned_data">
             IMAGE: <img src="{{asset($scan->receipt_path)}}" alt="profile Pic" height="200" width="200">
