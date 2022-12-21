@@ -27,7 +27,7 @@
             <div>{{$order->status}}</div>
 
             @foreach($order->items()->distinct()->get() as $item)
-                <a href="/items/{{$item->id}}" class="hover:bg-blue-400">
+                <a href="/items/{{$item->id}}" class="hover:bg-blue-400 text-black">
                     {{$item->orders->where('id', $order->id)->count() }}x {{$item->name}}
                 </a>
             @endforeach

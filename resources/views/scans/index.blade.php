@@ -12,6 +12,7 @@
                 <a href="#" data-bs-toggle="modal" data-bs-target="#scanModal" class="action_btn">Create</a>
                 <span id="scans_download_img" class="action_btn">Download Imgs</span>
                 <span id="scans_export_csv" class="action_btn">Export</span>
+                <span id="scans_clear_temp" class="action_btn">Clear temp</span>
             </div>
         </div>
         <div>

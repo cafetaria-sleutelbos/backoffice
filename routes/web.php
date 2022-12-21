@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/scans', ScanController::class);
     Route::get('/scans-export', [ScanController::class, 'export']);
     Route::get('/scans-download-images', [ScanController::class, 'downloadImages']);
+    Route::delete('/scans-temp', [ScanController::class, 'clearTemp']);
     Route::resource('/orders', OrderController::class);
     Route::resource('/items', ItemController::class);
     Route::resource('/api-keys', ApiKeysController::class);

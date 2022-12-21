@@ -51,6 +51,17 @@ $(document).ready(function () {
         $('#scans_download_img').on('click', function () {
             window.location.href = '/scans-download-images';
         })
+
+        $('#scans_clear_temp').on('click', function (){
+            axios({
+                method: 'DELETE',
+                url: '/scans-temp',
+                data: {
+                    firstName: 'Fred',
+                    lastName: 'Flintstone'
+                }
+            });
+        })
     }
     modal($('#exampleModal'))
 });

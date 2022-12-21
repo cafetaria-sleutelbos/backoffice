@@ -2410,6 +2410,16 @@ $(document).ready(function () {
     $('#scans_download_img').on('click', function () {
       window.location.href = '/scans-download-images';
     });
+    $('#scans_clear_temp').on('click', function () {
+      axios__WEBPACK_IMPORTED_MODULE_0___default()({
+        method: 'DELETE',
+        url: '/scans-temp',
+        data: {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        }
+      });
+    });
   }
   (0,_modal__WEBPACK_IMPORTED_MODULE_1__["default"])($('#exampleModal'));
 });
