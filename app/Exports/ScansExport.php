@@ -17,7 +17,7 @@ class ScansExport implements FromCollection, WithHeadings
         // return Employees::all();
 
         ## 2. Export specific columns
-        return Scan::select('id','data','created_at')->get();
+        return Scan::select('id','data','receipt_path','created_at')->get();
 
     }
 
@@ -26,6 +26,7 @@ class ScansExport implements FromCollection, WithHeadings
         return [
             '#',
             'data',
+            'receipt_path',
             'created_at'
         ];
     }
