@@ -40,13 +40,14 @@ class ScanController extends Controller
     }
     public function downloadImages()
     {
-        $temp = public_path('storage\temp');
-
-        if(!File::isDirectory($temp)){
-            File::makeDirectory($temp, 0777, true, true);
-        }
-
-        $zip_file = './storage/temp/receipt_images_'.time().'.zip';
+//        $temp = public_path('storage\temp');
+//
+//        if(!File::isDirectory($temp)){
+//            File::makeDirectory($temp, 0777, true, true);
+//        }
+//
+//        $zip_file = './storage/temp/receipt_images_'.time().'.zip';
+        $zip_file = 'receipt_images_'.time().'.zip';
         $zip = new \ZipArchive();
         $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
 
@@ -71,6 +72,6 @@ class ScanController extends Controller
         return Excel::download(new ScansExport, 'scans-' . time(). '.csv');
     }
     public function clearTemp(){
-        Storage::disk('public')->deleteDirectory('temp');
+//        Storage::disk('public')->deleteDirectory('temp');
     }
 }
