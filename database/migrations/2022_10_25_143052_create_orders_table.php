@@ -15,7 +15,9 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('status');
+            $table->string('status')->default('WAITING');
+            $table->boolean('is_adjusted')->default(false);
+            $table->boolean('is_phone')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

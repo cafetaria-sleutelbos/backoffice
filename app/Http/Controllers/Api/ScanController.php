@@ -11,7 +11,7 @@ use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use mysql_xdevapi\Exception;
+use App\AI\Adjusted\AdjustedService;
 use Throwable;
 
 class ScanController extends Controller
@@ -55,7 +55,7 @@ class ScanController extends Controller
                 'receipt_path' => $path
             ]);
 
-            $this->processScan($scan);
+            $this->processScan($scan, $file);
 
             return response('Scan received WITH image: ' . $path, 200);
         } else {
@@ -67,7 +67,7 @@ class ScanController extends Controller
         }
     }
 
-    public function processScan(Scan $scan)
+    public function processScan(Scan $scan, $file)
     {
         $scanData = json_decode($scan->data);
 
@@ -95,14 +95,14 @@ class ScanController extends Controller
                     }
                 }
             }
-
+            AdjustedService::run();
         } catch (Throwable $error) {
             $order->items()->detach();
             $order->delete();
             report($error);
             return false;
         }
-        return redirect('/orders/' . $order->id);
+        return $order;
     }
 
     private function getItem($itemArr)

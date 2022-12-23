@@ -12,6 +12,8 @@ class Order extends Model
 
     protected $fillable = [
         'status',
+        'is_adjusted',
+        'is_phone,'
     ];
 
     public function items()

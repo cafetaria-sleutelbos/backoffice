@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AI\Adjusted\AdjustedService;
 use App\Exports\ItemsExport;
 use App\Http\Requests\DeleteItemRequest;
 use App\Http\Requests\StoreItemRequest;
@@ -20,6 +21,7 @@ class ItemController extends Controller
 
     public function show(Request $request, Item $item)
     {
+        AdjustedService::run();
         return view('items.show')->with(['item' => $item]);
     }
 
