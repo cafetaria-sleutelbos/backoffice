@@ -21,7 +21,6 @@ class ItemController extends Controller
 
     public function show(Request $request, Item $item)
     {
-        AdjustedService::run();
         return view('items.show')->with(['item' => $item]);
     }
 

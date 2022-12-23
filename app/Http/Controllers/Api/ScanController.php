@@ -95,7 +95,7 @@ class ScanController extends Controller
                     }
                 }
             }
-            AdjustedService::run();
+//            AdjustedService::run();
         } catch (Throwable $error) {
             $order->items()->detach();
             $order->delete();
