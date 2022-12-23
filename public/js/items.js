@@ -2343,10 +2343,10 @@ function initTable() {
     'lengthChange': false,
     "stripeClasses": ['dt_even', 'dt_odd'],
     "columnDefs": [{
-      orderData: [4],
-      targets: 3
+      orderData: [6],
+      targets: 5
     }, {
-      targets: 4,
+      targets: 6,
       visible: false
     }],
     createdRow: function createdRow(row, data, index) {
@@ -2365,6 +2365,9 @@ $(document).ready(function () {
   if (table) {
     table.on('click', '.table_row', function () {
       window.location.href = '/items/' + $(this).attr('data-item-id');
+    });
+    $('#items_export_csv').on('click', function () {
+      window.location.href = '/items-export';
     });
   }
 });

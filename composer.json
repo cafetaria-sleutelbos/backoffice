@@ -19,7 +19,8 @@
         "league/csv": "^9.8",
         "livewire/livewire": "^2.0",
         "maatwebsite/excel": "*",
-        "ext-zip": "*"
+        "ext-zip": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

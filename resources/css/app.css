@@ -65,3 +65,8 @@ a {
 .delete:hover {
     background: crimson;
 }
+
+.items_list{
+    display: flex;
+    flex-direction: column;
+}

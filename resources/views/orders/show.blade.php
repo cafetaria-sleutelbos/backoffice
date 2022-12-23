@@ -26,11 +26,13 @@
         <div>
             <div>{{$order->status}}</div>
 
-            @foreach($order->items()->distinct()->get() as $item)
-                <a href="/items/{{$item->id}}" class="hover:bg-blue-400 text-black">
-                    {{$item->orders->where('id', $order->id)->count() }}x {{$item->name}}
-                </a>
-            @endforeach
+            <div class="items_list">
+                @foreach($order->items()->distinct()->get() as $item)
+                    <a href="/items/{{$item->id}}" class="hover:bg-blue-400 text-black">
+                        {{$item->orders->where('id', $order->id)->count() }}x {{$item->name}}
+                    </a>
+                @endforeach
+            </div>
         </div>
     </div>
 

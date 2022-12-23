@@ -9,6 +9,7 @@
                 </h2>
             </div>
             <div class="actions">
+                <span id="items_export_csv" class="action_btn">Export</span>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#itemModal" class="action_btn">Create</a>
             </div>
         </div>
@@ -24,6 +25,9 @@
                     </th>
                     <th>
                         Cooking time
+                    </th>
+                    <th>
+                        Complexity
                     </th>
                     <th>
                         Price
@@ -48,6 +52,7 @@
                         <td>
                             {{$item->cooking_time}}
                         </td>
+                        <td>{{$item->complexity}}</td>
                         <td>
                             {{$item->price}}
                         </td>

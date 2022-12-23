@@ -31,7 +31,17 @@
                                    value="{{old('cooking_time') ?? (isset($resource) ? $resource->cooking_time : '')}}">
                         </div>
                         <div>
-                            @error('cooking_time')
+                            @error('complexity')
+                            <div>
+                                <span class="text-red-600">{{$message}}</span>
+                            </div>
+                            @enderror
+                            <label for="complexity">Complexity</label>
+                            <input id="complexity" name="complexity" type="number"
+                                   value="{{old('complexity') ?? (isset($resource) ? $resource->complexity : '')}}">
+                        </div>
+                        <div>
+                            @error('price')
                             <div>
                                 <span class="text-red-600">{{$message}}</span>
                             </div>

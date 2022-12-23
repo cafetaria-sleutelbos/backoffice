@@ -38,6 +38,7 @@ class UpdateItemRequest extends FormRequest
         return [
             'name' => ['required', 'string'],
             'cooking_time' => ['required', 'integer', 'min:0'],
+            'complexity' => ['required', 'integer', 'min:1'],
             'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'],
         ];
     }

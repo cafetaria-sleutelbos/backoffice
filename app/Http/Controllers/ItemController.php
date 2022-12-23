@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ItemsExport;
 use App\Http\Requests\DeleteItemRequest;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ItemController extends Controller
 {
@@ -51,5 +53,9 @@ class ItemController extends Controller
         $item->delete();
 
         return redirect('/items');
+    }
+    public function export()
+    {
+        return Excel::download(new ItemsExport(), 'items-' . time(). '.csv');
     }
 }

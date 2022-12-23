@@ -30,5 +30,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/scans-temp', [ScanController::class, 'clearTemp']);
     Route::resource('/orders', OrderController::class);
     Route::resource('/items', ItemController::class);
+    Route::get('/items-export', [ItemController::class, 'export']);
     Route::resource('/api-keys', ApiKeysController::class);
+
+    Route::get('/test/{scan}', [\App\Http\Controllers\Api\ScanController::class, 'processScan']);
 });

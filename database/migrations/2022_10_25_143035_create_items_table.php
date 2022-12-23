@@ -16,7 +16,8 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('cooking_time');
+            $table->integer('cooking_time')->default(300);
+            $table->integer('complexity')->default(1);
             $table->float('price');
             $table->timestamps();
             $table->softDeletes();

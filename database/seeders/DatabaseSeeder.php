@@ -15,8 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(FrietSeeder::class);
-        $this->call(SnacksSeeder::class);
+        $this->call(ItemSeeder::class);
 
         if ((env('APP_ENV') ?? 'local') == 'local') {
             User::firstOrCreate([

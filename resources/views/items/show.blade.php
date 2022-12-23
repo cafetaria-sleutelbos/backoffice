@@ -22,7 +22,7 @@
                 <a href="#" data-bs-toggle="modal" data-bs-target="#itemModal" class="action_btn">Edit</a>
             </div>
         </div>
-        <b>{{$item->id}}. {{$item->name}}:</b> {{$item->name}} - {{$item->cooking_time}} - {{$item->price}}
+        <b>{{$item->id}}. {{$item->name}}:</b> {{$item->name}} - {{$item->cooking_time}} - {{$item->complexity}} - {{$item->price}}
         - {{$item->created_at}}
     </div>
 
