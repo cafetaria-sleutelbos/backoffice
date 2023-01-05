@@ -2341,6 +2341,7 @@ __webpack_require__.r(__webpack_exports__);
 function initTable() {
   return $('#items_table').DataTable({
     'lengthChange': false,
+    pageLength: 25,
     "stripeClasses": ['dt_even', 'dt_odd'],
     "columnDefs": [{
       orderData: [6],

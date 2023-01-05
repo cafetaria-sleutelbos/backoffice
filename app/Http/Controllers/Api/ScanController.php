@@ -55,8 +55,6 @@ class ScanController extends Controller
                 'receipt_path' => $path
             ]);
 
-            $this->processScan($scan, $file);
-
             return response('Scan received WITH image: ' . $path, 200);
         } else {
             Scan::create([
@@ -76,6 +74,7 @@ class ScanController extends Controller
         ]);
 
         try {
+            $currentAttached = [];
             foreach ($scanData as $data) {
                 $itemString = implode('', collect($data)->map(function ($block) {
                     return $block[0];
@@ -95,16 +94,27 @@ class ScanController extends Controller
                         $amount = 1;
                     }
 
-                    foreach ($order->items as $existingItem) {
-                        if($item->id == $existingItem->id){
-                            $amount += $existingItem->pivot->amount;
+                    $exists = false;
+                    foreach ($currentAttached as $key => $attached) {
+                        if($item->name == $key){
+                            $exists = true;
+                            $amount += $attached;
                         }
                     }
 
-                    $order->items()->attach(
-                        $item->id,
-                        ['amount' => $amount]
-                    );
+                    if($exists){
+                        $order->items()->updateExistingPivot(
+                            $item->id,
+                            ['amount' => $amount]
+                        );
+                        $currentAttached[$item->name] = $amount;
+                    }else{
+                        $order->items()->attach(
+                            $item->id,
+                            ['amount' => $amount]
+                        );
+                        $currentAttached[$item->name] = $amount;
+                    }
                 }
             }
 //            AdjustedService::run();

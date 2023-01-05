@@ -3,6 +3,7 @@ import axios from 'axios';
 function initTable() {
     return $('#orders_table').DataTable({
         'lengthChange': false,
+        pageLength: 25,
         "stripeClasses": ['dt_even', 'dt_odd'],
         "columnDefs": [
             {
