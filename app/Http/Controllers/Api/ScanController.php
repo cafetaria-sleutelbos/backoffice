@@ -95,6 +95,12 @@ class ScanController extends Controller
                         $amount = 1;
                     }
 
+                    foreach ($order->items as $existingItem) {
+                        if($item->id == $existingItem->id){
+                            $amount += $existingItem->pivot->amount;
+                        }
+                    }
+
                     $order->items()->attach(
                         $item->id,
                         ['amount' => $amount]
