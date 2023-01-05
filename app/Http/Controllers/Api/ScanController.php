@@ -55,6 +55,8 @@ class ScanController extends Controller
                 'receipt_path' => $path
             ]);
 
+            $this->processScan($scan, $file);
+
             return response('Scan received WITH image: ' . $path, 200);
         } else {
             Scan::create([
@@ -107,14 +109,13 @@ class ScanController extends Controller
                             $item->id,
                             ['amount' => $amount]
                         );
-                        $currentAttached[$item->name] = $amount;
                     }else{
                         $order->items()->attach(
                             $item->id,
                             ['amount' => $amount]
                         );
-                        $currentAttached[$item->name] = $amount;
                     }
+                    $currentAttached[$item->name] = $amount;
                 }
             }
 //            AdjustedService::run();
