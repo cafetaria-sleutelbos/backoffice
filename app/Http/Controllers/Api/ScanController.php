@@ -84,15 +84,21 @@ class ScanController extends Controller
                 if (count($itemArr ?? []) < 2) {
                     //SMALLER, SO NO AMOUNT (expected array(2)[AMOUNT, NAME]
                 } else {
-                    //SMALLER, SO NO AMOUNT (expected array(2)[AMOUNT, NAME]
                     $item = $this->getItem($itemArr);
                     if (!$item) {
                         return false;
                     }
 
-                    for ($i = 0; $i < $itemArr[0]; $i++) {
-                        $order->items()->attach($item);
+                    $amount = $itemArr[0];
+
+                    if ($amount <= 0 || $amount > 99) {
+                        $amount = 1;
                     }
+
+                    $order->items()->attach(
+                        $item->id,
+                        ['amount' => $amount]
+                    );
                 }
             }
 //            AdjustedService::run();

@@ -20,6 +20,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 2.00,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'KIPFINGERS'
@@ -27,6 +28,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'FRIKANDEL'
@@ -34,6 +36,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'FRIKANDEL SPECIAAL'
@@ -41,6 +44,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'FRIKANDEL MAYO'
@@ -48,6 +52,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'FRIKANDEL CURRY'
@@ -55,6 +60,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'FRIKANDEL M+C'
@@ -62,6 +68,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KROKET'
@@ -69,6 +76,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KROKET MAYO'
@@ -76,6 +84,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KROKET MOSTERD'
@@ -83,6 +92,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GOULASH KROKET'
@@ -90,6 +100,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KWEKKEBOOM KROKE'
@@ -97,6 +108,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROENTEN KROKET'
@@ -104,6 +116,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SATE KROKET'
@@ -111,6 +124,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KALFS KROKET'
@@ -118,6 +132,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GEHAKTBAL VET'
@@ -125,6 +140,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GEHAKTBAL JUS'
@@ -132,6 +148,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GEHAKTBAL.SPEC'
@@ -139,6 +156,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GEHAKTBAL SPEC.M+C'
@@ -146,6 +164,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'VIANDEL'
@@ -153,6 +172,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'MEXICANO'
@@ -160,6 +180,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'BAMI SCHIJF'
@@ -167,6 +188,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 350,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'BAMI BLOK'
@@ -174,6 +196,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'spicy viandel'
@@ -181,6 +204,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'NASI BAL'
@@ -188,6 +212,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 330,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'NASI SCHIJF'
@@ -195,6 +220,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KAASSOUFLE'
@@ -202,6 +228,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'HAM-KAASSOUFLE'
@@ -209,6 +236,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SJORTIE'
@@ -216,6 +244,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'BRAADWORST'
@@ -223,6 +252,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'BOKWORST'
@@ -230,6 +260,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KNAKWORST'
@@ -237,6 +268,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'BITTERBAL'
@@ -244,6 +276,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 400,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'SITOSTICK'
@@ -251,6 +284,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'HAPPYSTICK'
@@ -258,6 +292,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'ZIGEUNERSTICK'
@@ -265,6 +300,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'VISSTICK'
@@ -272,6 +308,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'KIPKORN'
@@ -279,6 +316,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SHOARMAROL'
@@ -286,6 +324,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SMULROL'
@@ -293,6 +332,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SATEROL'
@@ -300,6 +340,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'MACHO'
@@ -307,6 +348,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'LUCIFER'
@@ -314,6 +356,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KIPNUGGETS'
@@ -321,6 +364,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'RIBSTER'
@@ -328,6 +372,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'SHASLICK'
@@ -335,6 +380,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 200,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'KIPBURGER'
@@ -342,6 +388,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 420,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'MULKYBURGER'
@@ -349,6 +396,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'SCHNITSEL'
@@ -356,6 +404,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'HALVE HAAN'
@@ -363,6 +412,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'VIETNAMESE LOEMP'
@@ -370,6 +420,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 500,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'LOEMPIA'
@@ -377,6 +428,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 500,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'VEG.LOEMPIA'
@@ -384,6 +436,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 400,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'GLUTENVRIJ FRIK'
@@ -391,6 +444,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'KIPRUNNER'
@@ -398,6 +452,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'CRIZLY'
@@ -405,6 +460,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'LOEMPIDEL'
@@ -412,6 +468,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 400,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'VLAMPIJP'
@@ -419,6 +476,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'DIEK.5 STUK.'
@@ -426,6 +484,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 500,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'RAGOESTI'
@@ -433,6 +492,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'TWIJFELAAR'
@@ -440,6 +500,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'CHICKEN STRIPS'
@@ -447,6 +508,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'LIHANBOUTJE'
@@ -454,6 +516,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'PORTIE SATE'
@@ -461,6 +524,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SLAATJE'
@@ -468,6 +532,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 4,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'KROKIDEL XXL'
@@ -475,6 +540,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'XXL FRIK. SPEC'
@@ -482,6 +548,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'XXL FRIKANDEL'
@@ -489,6 +556,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'UIRINGEN'
@@ -496,6 +564,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 240,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'BONITA'
@@ -503,6 +572,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'RAUWKOST'
@@ -510,6 +580,7 @@ class SnackSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
     }
 }

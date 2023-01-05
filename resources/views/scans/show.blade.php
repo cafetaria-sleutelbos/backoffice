@@ -29,7 +29,17 @@
             IMAGE: <img src="{{asset('storage/'.$scan->receipt_path)}}" alt="profile Pic" height="200" width="200">
         </div>
         <div class="scanned_data">
-            DATA: {{$scan->data}}
+            DATA:
+            @foreach(json_decode($scan->data) ?? [] as $key => $line)
+                <div class="line_row">
+                    Line {{$key + 1}}:
+                    @foreach($line ?? [] as $word)
+                        <div class="conf_tooltip confidence_block {{$word[1] > 20 ? ($word[1] > 40 ? ($word[1] > 60 ? ($word[1] > 80 ? 'confidence_high' : 'confidence_med_high') : 'confidence_med') : 'confidence_low_med') : 'confidence_low'}}">{{$word[0]}}
+                            <span class="conf_tt_text">{{$word[1]}}</span>
+                        </div>
+                    @endforeach
+                </div>
+            @endforeach
         </div>
     </div>
 

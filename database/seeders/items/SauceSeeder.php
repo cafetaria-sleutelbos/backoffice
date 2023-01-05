@@ -20,6 +20,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE CURRY'
@@ -27,6 +28,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE STOOFVL.'
@@ -34,6 +36,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE SATE'
@@ -41,6 +44,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE JOPPIE'
@@ -48,6 +52,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE CHILLI/PICCA'
@@ -55,6 +60,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE ZIG.'
@@ -62,6 +68,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE SPECIAAL'
@@ -69,6 +76,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE MAYO'
@@ -76,6 +84,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE CURRY'
@@ -83,6 +92,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE STOOFVL'
@@ -90,6 +100,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE SATE'
@@ -97,6 +108,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE JOPPIE'
@@ -104,6 +116,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE CHILLI OF PICCA'
@@ -111,6 +124,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE ZIG.'
@@ -118,6 +132,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 40,
             'complexity' => 3,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE SPECIAAL'
@@ -125,6 +140,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'ZAKJE UITJES'
@@ -132,6 +148,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE KNOFLOOKSAUS'
@@ -139,6 +156,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE KNOFLOOKSAUS'
@@ -146,6 +164,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KLEINE CHAMP.SAUS'
@@ -153,6 +172,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 60,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'GROTE CHAMP.SAUS'
@@ -160,6 +180,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 60,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'APPELMOES'
@@ -167,6 +188,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
 
         //EXTRA
@@ -176,6 +198,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'CURRY'
@@ -183,6 +206,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SATESAUS'
@@ -190,6 +214,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'STOOFVLEES'
@@ -197,6 +222,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'JOPPIESAUS'
@@ -204,6 +230,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SPECIAAL'
@@ -211,6 +238,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'CHILLISAUS'
@@ -218,6 +246,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KNOFLOOKSAUS'
@@ -225,6 +254,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'CHAMPIGNONSAUS'
@@ -232,6 +262,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 60,
             'complexity' => 2,
             'price' => 1.60,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'TOMATEN KETCHUP'
@@ -239,6 +270,7 @@ class SauceSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 1,
             'price' => 1.60,
+            'in_back' => 0,
         ]);
     }
 }

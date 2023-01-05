@@ -15,17 +15,23 @@ class Item extends Model
     protected $fillable = [
         'name',
         'cooking_time',
+        'in_back',
         'complexity',
         'price',
     ];
 
     public function orders(): BelongsToMany
     {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Order::class)->withPivot('amount');;
     }
 
     public function Media(): MorphMany
     {
         return $this->morphMany(Media::class, 'model');
+    }
+
+    public function getSimple()
+    {
+        return ['name' => $this->name, 'cooking_time' => $this->cooking_time];
     }
 }

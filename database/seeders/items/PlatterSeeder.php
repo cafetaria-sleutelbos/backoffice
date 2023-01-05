@@ -20,6 +20,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 7,
             'price' => 2.00,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'NASISCHOTEL'
@@ -27,6 +28,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 7,
             'price' => 2.00,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'SCHNITZELSCHOTEL'
@@ -34,6 +36,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 5,
             'price' => 2.00,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'HALVE HAAN SCHOTEL'
@@ -41,6 +44,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 4,
             'price' => 2.00,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'HAMBURGER STEAK'
@@ -48,6 +52,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 4,
             'price' => 2.00,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SATE SCHOTEL'
@@ -55,6 +60,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 600,
             'complexity' => 4,
             'price' => 2.00,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'SHOARMA SCHOTEL'
@@ -62,6 +68,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 300,
             'complexity' => 4,
             'price' => 2.00,
+            'in_back' => 1,
         ]);
         Item::firstOrCreate([
             'name' => 'EI'
@@ -69,6 +76,7 @@ class PlatterSeeder extends Seeder
             'cooking_time' => 0,
             'complexity' => 2,
             'price' => 1.00,
+            'in_back' => 1,
         ]);
     }
 }

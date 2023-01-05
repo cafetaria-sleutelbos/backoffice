@@ -32468,6 +32468,61 @@ a {
   flex-direction: column;
 }
 
+.line_row{
+  display: flex;
+  align-content: center;
+}
+
+.confidence_block{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.1em 0.25em;
+  padding: 0.1em 0.25em;
+}
+
+.confidence_high{
+  background: rgba(46, 255, 0, 0.8);
+}
+
+.confidence_med_high{
+  background: rgba(255, 251, 0, 0.8);
+}
+
+.confidence_med{
+  background: rgba(255, 196, 0, 0.8);
+}
+
+.confidence_low_med{
+  background: rgba(255, 128, 0, 0.8);
+}
+
+.confidence_low{
+  background: rgba(255, 47, 0, 0.8);
+}
+
+.conf_tooltip{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.conf_tooltip .conf_tt_text{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.conf_tooltip:hover .conf_tt_text{
+  visibility: visible;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

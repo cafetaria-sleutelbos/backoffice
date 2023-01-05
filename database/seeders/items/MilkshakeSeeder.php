@@ -19,84 +19,96 @@ class MilkshakeSeeder extends Seeder
         ], [
             'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KL.BANAAN'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KL.VANILLE'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'KL.CHOC.'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'MED.AARDBEI'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'MED.BANAAN'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'MED.VANILLE'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'MED.CHOC.'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GR.AARDBEI'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GR.BANAAN'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GR.VANILLE'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
         Item::firstOrCreate([
             'name' => 'GR.CHOC.'
         ], [
              'cooking_time' => 0,
             'complexity' => 1,
-            'price' => 1.90
+            'price' => 1.90,
+            'in_back' => 0,
         ]);
     }
 }

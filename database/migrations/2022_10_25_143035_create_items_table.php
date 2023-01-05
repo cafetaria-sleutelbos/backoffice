@@ -19,6 +19,7 @@ class CreateItemsTable extends Migration
             $table->integer('cooking_time')->default(300);
             $table->integer('complexity')->default(1);
             $table->float('price')->default(2.00);
+            $table->boolean('in_back')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

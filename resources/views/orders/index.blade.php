@@ -43,7 +43,7 @@
                             {{$order->status}}
                         </td>
                         <td>
-                            {{$order->items->count()}}
+                            {{$order->items->sum(function ($item){return $item->pivot->amount;})}}
                         </td>
                         <td>
                             {{$order->created_at->format('d-m-Y H:i')}}
@@ -58,7 +58,7 @@
         </div>
     </div>
 
-    @include('orders.form')
+{{--    @include('orders.form')--}}
 @endsection
 
 @section('scripts')
