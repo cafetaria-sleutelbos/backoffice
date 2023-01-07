@@ -3,17 +3,22 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\StoreOrderRequest;
+use App\Http\Requests\Api\UpdateOrderRequest;
 use App\Http\Resources\Api\OrderResource;
 use App\Models\Order;
-use App\Services\ProcessOrderService;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json(OrderResource::collection(Order::all()->where('status', 'WAITING'))->response()->getData(true));
+        $status = $request->get('status') ?? 'WAITING';
+
+        $op = '=';
+        if($status != 'WAITING'){
+            $op = '!=';
+        }
+        return response()->json(OrderResource::collection(Order::all()->where('status', $op, 'WAITING'))->response()->getData(true));
     }
 
     public function show(Order $order)
@@ -21,21 +26,22 @@ class OrderController extends Controller
         return $order;
     }
 
-    public function store(StoreOrderRequest $request)
+    public function update(UpdateOrderRequest $request, Order $order)
     {
-//        $validated = $request->validated();
-//        $statuses = config('enums.order_statuses');
-//
-//        $order = Order::create([
-//            'status' => $statuses['WAITING'] //WAITING
-//        ]);
-//
-//        foreach ($validated['items'] as $item) {
-//            for ($i = 0; $i < $item['amount']; $i++) {
-//                $order->items()->attach($item['id']);
-//            }
-//        }
-//
-//        return response('order created', 200);
+        return $order->update([
+            'status' => $request
+        ]);
+    }
+
+    public function finishOrder(Order $order){
+        if($order->status != 'WAITING'){
+            return $order->update([
+                'status' => 'WAITING'
+            ]);
+        }
+
+        return $order->update([
+            'status' => 'IN_PROGRESS'
+        ]);
     }
 }

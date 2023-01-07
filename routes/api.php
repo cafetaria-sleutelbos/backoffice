@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', [AuthController::class, 'login']);
 Route::apiResource('scans', ScanController::class);
 Route::apiResource('orders', OrderController::class);
+Route::put('orders/{order}/finish', [OrderController::class, 'finishOrder']);
 Route::apiResource('items', ItemController::class);
