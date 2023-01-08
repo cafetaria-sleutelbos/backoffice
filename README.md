@@ -1,3 +1,9 @@
+# Backoffice
+Backoffice for Cafetaria de Sleutelbos
+
+This Laravel application is meant to be used on desktop. The Backoffice is the centerpiece of the whole system and manages the order and item models. The scans received from the scanner can also be viewed or adjusted. This application can be found live at:
+https://jellyfish-app-kkaj7.ondigitalocean.app/
+
 ## To start:
 - PHP version ^8
 - Composer install
