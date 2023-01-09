@@ -12,6 +12,7 @@ class Order extends Model
 
     protected $fillable = [
         'status',
+        'scan_id',
         'is_adjusted',
         'is_phone,'
     ];
