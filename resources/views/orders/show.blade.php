@@ -25,6 +25,10 @@
 
         <div>
             <div>{{$order->status}}</div>
+            <div>Adjusted: {{$order->is_adjusted ? 'true' : "false"}}</div>
+            <a href="/scans/{{$order->scan_id}}" class="hover:bg-blue-400 text-black">
+                Scan ID: {{$order->scan_id }}
+            </a>
 
             <div class="items_list">
                 @foreach($order->items()->distinct()->get() as $item)

@@ -55,7 +55,7 @@ class ScanController extends Controller
                 'receipt_path' => $path
             ]);
 
-            $this->processScan($scan, $file);
+            $this->processScan($scan, $file, $request->get('adjusted'));
 
             return response('Scan received WITH image: ' . $path, 200);
         } else {
@@ -67,12 +67,14 @@ class ScanController extends Controller
         }
     }
 
-    public function processScan(Scan $scan, $file)
+    public function processScan(Scan $scan, $file, $adjusted)
     {
         $scanData = json_decode($scan->data);
 
         $order = Order::create([
-            'status' => 'WAITING'
+            'status' => 'WAITING',
+            'scan_id' => $scan->id,
+            'is_adjusted' => ($adjusted > 5)
         ]);
 
         try {

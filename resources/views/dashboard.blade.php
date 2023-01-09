@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-jet-welcome/>
+    <div>
+        DASHBOARD
+    </div>
 @endsection

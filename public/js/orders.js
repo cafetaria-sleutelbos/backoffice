@@ -2344,10 +2344,10 @@ function initTable() {
     pageLength: 25,
     "stripeClasses": ['dt_even', 'dt_odd'],
     "columnDefs": [{
-      orderData: [4],
-      targets: 3
+      orderData: [5],
+      targets: 4
     }, {
-      targets: 4,
+      targets: 5,
       visible: false
     }],
     createdRow: function createdRow(row, data, index) {

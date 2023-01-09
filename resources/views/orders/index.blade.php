@@ -26,6 +26,9 @@
                         Items count
                     </th>
                     <th>
+                        Adjusted
+                    </th>
+                    <th>
                         Created
                     </th>
                     <th>
@@ -44,6 +47,9 @@
                         </td>
                         <td>
                             {{$order->items->sum(function ($item){return $item->pivot->amount;})}}
+                        </td>
+                        <td>
+                            {{$order->is_adjusted ? 'Is adjusted' : "Not adjusted"}}
                         </td>
                         <td>
                             {{$order->created_at->format('d-m-Y H:i')}}
